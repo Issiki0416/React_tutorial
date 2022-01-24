@@ -1,5 +1,5 @@
 import React from "react"; //JSXを使用するだけならReactのimportは必須ではない
-import ReactDom from "react-dom"; //htmlにコンポーネントを反映する必要があるのでそれを記述
+import ReactDom from "react-dom"; //htmlにコンポーネントを反映する必要があるのでそれを記述するためDOMを用意
 import App from "./App"; //Appファイルのコンポーネントをimportする
 
 // const App = () => {

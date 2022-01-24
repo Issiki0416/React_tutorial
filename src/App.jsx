@@ -9,11 +9,14 @@ import { ColorfulMessage } from "./components/ColorfulMessage";
 const App = () => {
   // console.log("最初");//state変更時もレンダリングするので通る
   //コンポーネントないでつかうStateはこの状態を持っているとわかるように最初のところに書く
-  const [num, setNum] = useState(0); //[動的に代わるnum,それを更新していくsetNum関数名]
+  const [num, setNum] = useState(0);
+  //useState(0)の0は初期値
+  //[stateの変数名,stateを更新する関数名]
+  //[動的に代わるnum,それを更新していくsetNum関数名]
   //表示非表示という状態をもたせたいのでStateを使う。ここではon/offなのでboolean
   const [faceShowFlag, setFaceShowFlag] = useState(false);
 
-  //Stateの更新はsetNum関数を使用する
+  //Stateの更新は自分で決めた関数ここではsetNum関数を使用する
   const onClickCountUp = () => {
     setNum(num + 1);
   };
@@ -51,7 +54,7 @@ const App = () => {
   return (
     //Propsについて（２パターン）
     //特定の名称をつけて渡すパターン
-    //タグで囲った中身をchildrenとして渡すパターンが有る
+    //コンポーネントのタグで囲って中身をchildrenとして受け取れるパターンが有る
     <>
       <h1 style={{ color: "red" }}>あ、こんちゃ</h1>
       <ColorfulMessage color="blue">おげんきですか？</ColorfulMessage>
